@@ -7,37 +7,9 @@ library(shinythemes)
 library(primes)
 library(mclust)
 library(shinyvalidate)
-library(doParallel)
 library(fastDummies)
 library(progress)
-#' Detect the number of available CPU cores
-#'
-#' Use the detectCores function to determine the number of CPU cores available.
-#'
-#' @return An integer representing the number of CPU cores.
-num_cores <- detectCores()
 
-#' Initialize and register a parallel cluster
-#'
-#' Create a parallel cluster using the detected CPU cores and register it for parallel processing.
-#'
-#' @return A parallel cluster object.
-#' @export
-tryCatch({
-  cl <- makeCluster(num_cores)
-  registerDoParallel(cl)
-}, error = function(e) {
-  cat("Error creating parallel cluster:", conditionMessage(e), "\n")
-  cat("Traceback:", conditionCall(e), "\n")
-  # Handle the error or exit gracefully based on your requirements
-}, finally = {
-  # Ensure that the parallel cluster is stopped, even if an error occurs
-  on.exit({
-    if (!is.null(cl)) {
-      stopCluster(cl)
-    }
-  })
-})
 
 #' KNN model function
 #'
@@ -335,12 +307,6 @@ knn_imputation <- function(data, k) {
   })
 }
 
-#' Terminate the parallel backend
-#'
-#' Stop the parallel cluster to release computing resources.
-#'
-#' @export
-stopCluster(cl)
 
 
 
