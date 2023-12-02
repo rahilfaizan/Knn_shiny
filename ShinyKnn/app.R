@@ -376,11 +376,11 @@ The skills you gain from building KNN from scratch can be applied to understandi
     )
   ),
   
-  fullSection(style="background-color:#C88EA7",
+  fullSection(style="background-color:#B1B2FF",
               menu = "work",
-              h2("KNN Workflow",style = "font-weight: bold;"),
-              pageContainer(
-                tags$img(src = "https://drive.google.com/uc?export=view&id=1MFmrnhVKHXMl6CjV9UFtRv-0cjL7A1tn",
+              h2("KNN_400 Package",style = "font-weight: bold;"),
+              pageContainer(style="margin-right:13%",
+                tags$img(src = "https://drive.google.com/uc?export=view&id=1qgTFUkTk5REb4PYMqNVRa7U8-rxtUbbN",height=700,width=1200
                 )
               )
   ),
@@ -435,7 +435,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
                          img(src = "https://drive.google.com/uc?export=view&id=1ThVyJjXDpXu35aWsV_0bBSINULv6CCvu", width = "100%",height='200%',  # Replace with your image URL
                              align = "center")),
                        
-                       column(style = "text-align: left",
+                       column(style = "text-align: left;font-size:20px",
                               width = 6,
                               h2("KNN Model Function", style = "font-weight: bold;"),
                               h4("Function Parameters", style = "font-weight: bold;"),
@@ -445,22 +445,13 @@ The skills you gain from building KNN from scratch can be applied to understandi
                               p("- **k**: Number of neighbors to consider (default is 5)."),
                               p("- **distance**: Distance metric to use (default is 'euclidean')."),
                               
-                              h4("Function Workflow", style = "font-weight: bold;"),
-                              p("1. Calculate Sample Sizes: Determine the number of training and test samples."),
-                              p("2. Initialize Predictions Vector: Create an empty vector to store predictions for the test data."),
-                              p("3. Calculate Distances: Combine training and test data. Calculate the distance matrix using the specified distance metric."),
-                              p("4. Iterate Over Test Samples: For each test sample, extract distances to all training points and identify the k-nearest neighbors."),
-                              p("5. Make Predictions: Determine the majority class of the k-nearest neighbors. Handle ties by selecting the class with the smallest index."),
-                              p("6. Handle Errors: Utilize tryCatch to manage errors gracefully."),
-                              
                               h4("Implementation Details", style = "font-weight: bold;"),
                               p("- Distance Calculation: Utilizes the dist function with the specified distance metric."),
                               p("- Majority Voting: Counts occurrences of each class in the k-nearest neighbors. Handles ties by selecting the class with the smallest index."),
                               p("- Error Handling: Uses tryCatch to capture and report errors with relevant information."),
                               
                               h4("Example Usage", style = "font-weight: bold;"),
-                              code(
-                                "# Example Usage",
+                              tags$pre("# Example Usage",
                                 "train_data <- ...",
                                 "test_data <- ...",
                                 "target_train <- ...",
@@ -469,12 +460,16 @@ The skills you gain from building KNN from scratch can be applied to understandi
                        )
               )),
     
-    
+    fullSlide(style="background-color: #7F669D",              
+              h2("KNN Workflow",style = "font-weight: bold;"),
+              pageContainer(style="margin-right:15%",
+                tags$img(src="https://drive.google.com/uc?export=view&id=1m46xcjiEO4HNc3I6hk0iKcN0-OfJaxd0"))
+             ),
     fullSlide(style="background-color: #C3F3EC",
               fluidRow(style="margin:2%;color:black",
                        column(
                          width = 6,
-                         img(src = " https://drive.google.com/uc?export=view&id=1AiT7Yi7jLSEsbjITqNY2wcurnrv8TFeG", width = "100%",height='300%',  # Replace with your image URL
+                         img(src = "https://drive.google.com/uc?export=view&id=1AiT7Yi7jLSEsbjITqNY2wcurnrv8TFeG", width = "100%",height='300%',  # Replace with your image URL
                              align = "center"),
                          div(style = "height:73.5px"),
                          img(src = "https://drive.google.com/uc?export=view&id=1DT5vi8JgsofOPNbH0bSkBzIuve3mK-CI",width = "100%",height='300%',  # Replace with your image URL
@@ -531,7 +526,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
                          img(src = "https://drive.google.com/uc?export=view&id=1c9TSmLq9jjsMmqbR4A-HzUvLtifwezrn", width = "100%",height='200%',  # Replace with your image URL
                              align = "center")),
                        
-                       column(style = "text-align: left",
+                       column(style = "text-align: left;font-size:20px",
                               width = 6,
                               h2("Repeated Cross-Validation Function", style = "font-weight: bold;"),
                               h4("This function performs repeated cross-validation for KNN classification.",style = "font-weight: bold;"),
@@ -548,15 +543,14 @@ The skills you gain from building KNN from scratch can be applied to understandi
                               p("- The function ensures proper error handling, reporting errors during execution."),
                               p("- Numeric variables are scaled to prevent dominance of variables with larger scales."),
                               p("- Dummy encoding is applied for categorical variables, enhancing model performance."),
-                              p("- Mean accuracies are computed to assess the overall performance of the KNN model."),
-                              p("- The function supports different distance metrics for flexibility in model tuning."),
-                              p("- Results include predictions for each k value, allowing for detailed analysis."),
-                              
-                              h4("Return Value", style = "font-weight: bold;"),
-                              p("A list containing mean accuracies and predictions for each k value."),
+                           
                        )
               )),
-    
+    fullSlide(style="background-color: #146C94", 
+              h2("Repeted CV(r_cv()) Workflow",style = "font-weight: bold;color:white"),
+              pageContainer(style="margin-right:15%",
+                            tags$img(src="https://drive.google.com/uc?export=view&id=1vuHwSKoL8ms17ACd2j-gcnnZTEdyfVEv"))
+    ),
     
     fullSlide(style="background-color: #B0D9B1",
               fluidRow(style="margin:2%;color:black",
@@ -566,23 +560,15 @@ The skills you gain from building KNN from scratch can be applied to understandi
                              align = "center")
                        ),
                        
-                       column(style = "text-align: left",
+                       column(style = "text-align: left;font-size:20px",
                               width = 6,
-                              h4("Function Workflow", style = "font-weight: bold;"),
-                              p("1. Check for empty input data to ensure there is data to work with."),
-                              p("2. Validate the target column to ensure it exists in the dataset."),
-                              p("3. Verify there is enough data for the specified number of folds in cross-validation."),
-                              p("4. Ensure k_values are valid positive integers greater than zero."),
-                              p("5. Check if the specified distance metric is valid and supported."),
-                              p("6. Handle missing values in k_values, raising an error if none are provided."),
-                              p("7. Initialize variables to store results, including mean accuracies and predictions."),
-                              p("8. Dummy encode categorical variables for better handling in the KNN algorithm."),
-                              p("9. Scale numeric variables if required to normalize their impact on the distance metric."),
-                              p("10. Perform repeated cross-validation for each k value, iterating over folds."),
-                              p("11. Compute and print mean accuracy over all folds for each k, aiding in model evaluation."),
-                              p("12. Store mean accuracy and predictions for each k to facilitate analysis and model comparison."),
-                              h4("Exported Function", style = "font-weight: bold;"),
-                              code(
+                              p("- Mean accuracies are computed to assess the overall performance of the KNN model."),
+                              p("- The function supports different distance metrics for flexibility in model tuning."),
+                              p("- Results include predictions for each k value, allowing for detailed analysis."),
+                              
+                              h4("Return Value", style = "font-weight: bold;"),
+                              p("A list containing mean accuracies and predictions for each k value."),
+                              tags$pre(
                                 "# Example Usage ",
                                 "data <- ... ",
                                 "target_col <- ...",
@@ -601,7 +587,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
                          img(src = "https://drive.google.com/uc?export=view&id=1kWCFS3XQ5y4HGIC5AYfg7qa3ZG3dvoFC", width = "100%",height='200%',  # Replace with your image URL
                              align = "center")),
                        
-                       column(style = "text-align: left",
+                       column(style = "text-align: left;font-size:20px",
                               width = 6,
                               h2("Mode Function", style = "font-weight: bold;"),
                               p("This function calculates the mode of a vector."),
@@ -625,18 +611,16 @@ The skills you gain from building KNN from scratch can be applied to understandi
                               h4("Return Value", style = "font-weight: bold;"),
                               p("The imputed dataset."),
                               
-                              h4("Function Workflow", style = "font-weight: bold;"),
-                              p("1. Get the number of samples in the dataset."),
-                              p("2. Identify numeric and categorical columns for imputation."),
-                              p("3. Iterate over each sample in the dataset."),
-                              p("4. Check for missing values in the numeric and categorical columns of the test data."),
-                              p("5. Continue with KNN imputation... (actual implementation details are not provided here)."),
-                              p("6. Handle errors gracefully using tryCatch."),
                               
                        )
               )),
     
     
+    fullSlide(style="background-color: #65647C",              
+              h2("KNN Imputation Workflow",style = "font-weight: bold;color:white"),
+              pageContainer(style="margin-right:13%",
+                            tags$img(src="https://drive.google.com/uc?export=view&id=1ZXF6rTsHk0FFEjpKj0Zln0abZfjPJVwJ",width=1200))
+    ),
     fullSlide(style="background-color: #B4E4FF",
               fluidRow(style="margin:2%;color:black",
                        column(
@@ -645,29 +629,15 @@ The skills you gain from building KNN from scratch can be applied to understandi
                              align = "center")
                        ),
                        
-                       column(style = "text-align: left",
+                       column(style = "text-align: left;font-size:20px",
                               width = 6,
-                              h2("KNN Imputation Function (Continued)", style = "font-weight: bold;"),
-                              
-                              h4("Function Workflow (Continued)", style = "font-weight: bold;"),
-                              p("The KNN imputation function continues with the imputation process for missing values in the dataset."),
-                              p("1. Checks if there are any missing values in numeric or categorical columns."),
-                              p("2. Converts the selected numeric and categorical columns to matrices for distance calculations."),
-                              p("3. Calculates Euclidean distances between the test point and all other data points for numeric columns."),
-                              p("4. Checks if all distances are infinite; if true, skips imputation for the current data point."),
-                              p("5. Calculates Hamming distances between the test point and all other data points for categorical columns."),
-                              p("6. Combines distances for numeric and categorical variables (weights can be adjusted)."),
-                              p("7. Finds k-nearest neighbors based on the combined distances."),
-                              p("8. Imputes missing values in the test data with the mode (most common category) of the nearest neighbors for categorical columns."),
-                              p("9. Imputes missing values in the test data with the average of the nearest neighbors for numeric columns."),
-                              
                               h4("Error Handling", style = "font-weight: bold;"),
                               p("The function utilizes tryCatch to handle potential errors gracefully."),
                               p("- In case of an error, it prints an error message and traceback information."),
                               p("- If the error is of type 'stop', it provides additional details about the error."),
                               p("This ensures robust error reporting and helps diagnose issues during execution."),
                               h2("KNN Imputation Function - Example Usage", style = "font-weight: bold;"),
-                              code("# Example: KNN Imputation",
+                              tags$pre("# Example: KNN Imputation",
                                    "data <- data.frame(",
                                    "  numeric_col = c(1, 2, NA, 4, 5),",
                                    "  categorical_col = c('A', 'B', 'A', 'B', NA)",
