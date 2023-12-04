@@ -394,7 +394,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
                img(src = "https://drive.google.com/uc?export=view&id=1L0VUh9OpQ1jYw9kZm3C7HaheEREE7GHy", width = "100%",height='200%',  # Replace with your image URL
                    align = "center")),
              
-             column(style = "text-align: left;",
+             column(style = "text-align: left;font-size:18px",
                     width = 6,
                     h2("Load Required Libraries", style = "font-weight: bold;"),
                     p("This section loads the necessary libraries for parallel processing and dummy encoding."),
@@ -439,11 +439,12 @@ The skills you gain from building KNN from scratch can be applied to understandi
                               width = 6,
                               h2("KNN Model Function", style = "font-weight: bold;"),
                               h4("Function Parameters", style = "font-weight: bold;"),
-                              p("- **train_data**: Training data used to build the KNN model."),
-                              p("- **test_data**: Test data for which predictions are made."),
-                              p("- **target_train**: Target variable in the training data."),
-                              p("- **k**: Number of neighbors to consider (default is 5)."),
-                              p("- **distance**: Distance metric to use (default is 'euclidean')."),
+                              p("- train_data: Training data used to build the KNN model."),
+                              p("- test_data: Test data for which predictions are made."),
+                              p("- target_train: Target variable in the training data."),
+                              p("- k: Number of neighbors to consider (default is 5)."),
+                              p("- distance: Distance metric to use (default is 'euclidean')."),
+                              p("- task: regression or classification (default is 'classification')."),
                               
                               h4("Implementation Details", style = "font-weight: bold;"),
                               p("- Distance Calculation: Utilizes the dist function with the specified distance metric."),
@@ -481,10 +482,10 @@ The skills you gain from building KNN from scratch can be applied to understandi
                               p("This function wraps the KNN model for convenient use."),
                               
                               h4("Function Parameters", style = "font-weight: bold;"),
-                              p("- **train_data:** The training data."),
-                              p("- **target_train:** The target variable in the training data."),
-                              p("- **k:** The number of neighbors to consider (default is 5)."),
-                              p("- **distance:** The distance metric to use (default is 'euclidean')."),
+                              p("- train_data: The training data."),
+                              p("- target_train: The target variable in the training data."),
+                              p("- k: The number of neighbors to consider (default is 5)."),
+                              p("- distance: The distance metric to use (default is 'euclidean')."),
                               
                               h4("Return Value", style = "font-weight: bold;"),
                               p("An object representing the KNN model."),
@@ -501,8 +502,8 @@ The skills you gain from building KNN from scratch can be applied to understandi
                               p("This function predicts the target variable using the KNN model."),
                               
                               h4("Function Parameters", style = "font-weight: bold;"),
-                              p("- **model:** The KNN model object."),
-                              p("- **new_data:** The new data for prediction."),
+                              p("- model: The KNN model object."),
+                              p("- new_data: The new data for prediction."),
                               
                               h4("Return Value", style = "font-weight: bold;"),
                               p("A vector of predictions for the new data."),
@@ -532,13 +533,14 @@ The skills you gain from building KNN from scratch can be applied to understandi
                               h4("This function performs repeated cross-validation for KNN classification.",style = "font-weight: bold;"),
                               
                               h4("Function Parameters", style = "font-weight: bold;"),
-                              p("- **data:** The input data."),
-                              p("- **target_col:** The target column in the dataset."),
-                              p("- **k_values:** A vector of positive integers representing different values of k."),
-                              p("- **test_size:** The proportion of the data to use for testing (default is 0.2)."),
-                              p("- **distance_metric:** The distance metric to use (default is 'euclidean')."),
-                              p("- **num_folds:** The number of folds for cross-validation (default is 5)."),
-                              p("- **Scale:** Should numeric variables be scaled? (default is TRUE)."),
+                              p("- data: The input data."),
+                              p("- target_col: The target column in the dataset."),
+                              p("- k_values: A vector of positive integers representing different values of k."),
+                              p("- test_size: The proportion of the data to use for testing (default is 0.2)."),
+                              p("- distance_metric: The distance metric to use (default is 'euclidean')."),
+                              p("- num_folds: The number of folds for cross-validation (default is 5)."),
+                              p("- Scale: Should numeric variables be scaled? (default is TRUE)."),
+                              p("- task: regression or classification (default is classification)."),
                               h4("Additional Considerations", style = "font-weight: bold;"),
                               p("- The function ensures proper error handling, reporting errors during execution."),
                               p("- Numeric variables are scaled to prevent dominance of variables with larger scales."),
@@ -593,8 +595,8 @@ The skills you gain from building KNN from scratch can be applied to understandi
                               p("This function calculates the mode of a vector."),
                               
                               h4("Function Parameters", style = "font-weight: bold;"),
-                              p("- **x:** A vector."),
-                              p("- **na.rm:** Should missing values be removed? (default is FALSE)."),
+                              p("- x: A vector."),
+                              p("- na.rm: Should missing values be removed? (default is FALSE)."),
                               
                               h4("Return Value", style = "font-weight: bold;"),
                               p("The mode of the vector."),
@@ -605,9 +607,10 @@ The skills you gain from building KNN from scratch can be applied to understandi
                               p("This function performs KNN imputation for missing values in a dataset."),
                               
                               h4("Function Parameters", style = "font-weight: bold;"),
-                              p("- **data:** The input data."),
-                              p("- **k:** The number of neighbors to consider for imputation."),
-                              
+                              p("- data: The input data."),
+                              p("- k: The number of neighbors to consider for imputation."),
+                              p("- distance_metric: The distance metric to use (default is 'euclidean')."),
+                      
                               h4("Return Value", style = "font-weight: bold;"),
                               p("The imputed dataset."),
                               
