@@ -376,7 +376,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
     )
   ),
   
-  fullSection(style="background-color:#B1B2FF",
+  fullSection(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
               menu = "work",
               h2("KNN_400 Package",style = "font-weight: bold;"),
               pageContainer(style="margin-right:13%",
@@ -387,7 +387,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
   
   fullSection(
     menu = "lib",
-    style="background-color: #7ED7C1",
+    style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
     fluidRow(style="margin:2%;color:black",
              column(
                width = 6,
@@ -400,8 +400,8 @@ The skills you gain from building KNN from scratch can be applied to understandi
                     p("This section loads the necessary libraries for parallel processing and dummy encoding."),
                     
                     h4("Imported Libraries", style = "font-weight: bold;"),
-                    p("- **doParallel:** A library for parallel processing."),
-                    p("- **fastDummies:** A library for efficient dummy encoding of categorical variables."),
+                    p("- doParallel: A library for parallel processing."),
+                    p("- fastDummies: A library for efficient dummy encoding of categorical variables."),
                     
                     h2("Detect the Number of Available CPU Cores", style = "font-weight: bold;"),
                     p("The 'detectCores' function is used to identify the number of available CPU cores on the system."),
@@ -428,7 +428,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
   fullSection(
     menu = "knn",
     
-    fullSlide(style="background-color: #FF8080",
+    fullSlide(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
               fluidRow(style="margin:2%;color:black",
                        column(
                          width = 6,
@@ -461,12 +461,12 @@ The skills you gain from building KNN from scratch can be applied to understandi
                        )
               )),
     
-    fullSlide(style="background-color: #7F669D",              
+    fullSlide(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",              
               h2("KNN Workflow",style = "font-weight: bold;"),
               pageContainer(style="margin-right:15%",
                 tags$img(src="https://drive.google.com/uc?export=view&id=1m46xcjiEO4HNc3I6hk0iKcN0-OfJaxd0"))
              ),
-    fullSlide(style="background-color: #C3F3EC",
+    fullSlide(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
               fluidRow(style="margin:2%;color:black",
                        column(
                          width = 6,
@@ -520,7 +520,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
   fullSection(
     menu = "r_cv",
     
-    fullSlide(style="background-color: #DFCCFB",
+    fullSlide(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
               fluidRow(style="margin:2%;color:black",
                        column(
                          width = 6,
@@ -548,13 +548,13 @@ The skills you gain from building KNN from scratch can be applied to understandi
                            
                        )
               )),
-    fullSlide(style="background-color: #146C94", 
+    fullSlide(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);", 
               h2("Repeted CV(r_cv()) Workflow",style = "font-weight: bold;color:white"),
               pageContainer(style="margin-right:15%",
                             tags$img(src="https://drive.google.com/uc?export=view&id=1vuHwSKoL8ms17ACd2j-gcnnZTEdyfVEv"))
     ),
     
-    fullSlide(style="background-color: #B0D9B1",
+    fullSlide(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
               fluidRow(style="margin:2%;color:black",
                        column(
                          width = 6,
@@ -582,7 +582,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
   fullSection(
     menu = "imp",
     
-    fullSlide(style="background-color: #FFDD83",
+    fullSlide(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
               fluidRow(style="margin:2%;color:black",
                        column(
                          width = 6,
@@ -619,12 +619,12 @@ The skills you gain from building KNN from scratch can be applied to understandi
               )),
     
     
-    fullSlide(style="background-color: #65647C",              
+    fullSlide(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",              
               h2("KNN Imputation Workflow",style = "font-weight: bold;color:white"),
               pageContainer(style="margin-right:13%",
                             tags$img(src="https://drive.google.com/uc?export=view&id=1ZXF6rTsHk0FFEjpKj0Zln0abZfjPJVwJ",width=1200))
     ),
-    fullSlide(style="background-color: #B4E4FF",
+    fullSlide(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
               fluidRow(style="margin:2%;color:black",
                        column(
                          width = 6,
@@ -657,7 +657,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
   
   
   
-  fullSection(style="background-color:#E8ECD6;",
+  fullSection(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
               menu = "prob",
               h1("Challenges in Model Development", style = "font-weight: bold; text-align: center;"),
               
@@ -685,7 +685,7 @@ The skills you gain from building KNN from scratch can be applied to understandi
               
   ),
   
-  fullSection(style="background-color: #FFE7CE",
+  fullSection(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
               menu = "knn_page",
               fluidRow(style="margin:2%",
                        column(
@@ -763,9 +763,9 @@ The skills you gain from building KNN from scratch can be applied to understandi
                        )
               ),
   ),
-  fullSection(style="background-color:#FFB085",
+  fullSection(style="background:linear-gradient(45deg, #ff7e5f, #feb47b);",
               menu = "end",
-              h2("Thank You",style = "font-weight: bold;font-size:60px"),
+              h2("Thank You!",style = "font-weight: bold;font-size:60px"),
               p(style="font-size:20px",icon("github"),
                 "Visit the GitHub repository for Knn_400 package",
                 tags$a(href = "https://github.com/rahilfaizan/Knn_400", "Knn_400 Repository")),
